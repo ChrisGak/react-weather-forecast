@@ -1,0 +1,344 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Ubuntu-Bold";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-BoldItalic";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-Italic";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-Light";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-Light.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-LightItalic";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-Medium";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-MediumItalic";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu-Regular";
+    src: url("./Slice/Fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.awf-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #373AF5;
+}
+
+.awf-app::before {
+    content: "";
+    background: url("./Slice/Background/Academy-Weather forecast-Bg-buttom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.awf-app::after {
+    content: "";
+    background: url("./Slice/Background/Academy-Weather forecast-Bg-up.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.awf-forecast {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 0 40px;
+    background-color: #373AF5;
+}
+
+.awf-header {
+    align-self: center;
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 102px;
+    line-height: 122px;
+    /* #Base weak */
+    color: #FFFFFF;
+}
+
+.awf-forecast-card {
+    width: 660px;
+    height: 524px;
+    padding: 50px 58px;
+    /* #Base weak */
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+    border-radius: 8px;
+}
+
+.awf-forecast-card_label {
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    /* Base strong */
+
+    color: #2C2D76;
+}
+
+.awf-past-forecast {
+    margin-left: 34px;
+}
+
+.awf-field {
+    width: 252px;
+    height: 48px;
+    /* Secondary 0.06 */
+    background: rgba(128, 131, 164, 0.06);
+    /* Secondary 0.2 */
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.awf-field:last-child {
+    margin-left: 40px;
+}
+
+.awf-field:hover {
+    /* Secondary */
+    border: 2px solid #8083A4;
+}
+
+.awf-field,
+.awf-field > option {
+    padding: 12px 18px;
+    font-family: Ubuntu-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* Base strong */
+    color: #2C2D76;
+}
+
+.awf-weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 238px;
+}
+
+.awf-weather-report {
+    margin-top: 54px;
+}
+
+.awf-weekly-forecast > .awf-weather-report:not(._empty) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.awf-weekly-forecast .awf-weather-card._filled {
+    width: 174px;
+    margin-right: 10px;
+}
+
+.awf-weekly-forecast .awf-weather-report_button {
+    align-self: center;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    border: none;
+}
+.awf-weekly-forecast .awf-weather-report_button._left {
+    background: url("./Slice/icons/24/chevron-left.png");
+}
+
+.awf-weekly-forecast .awf-weather-report_button._right {
+    background: url("./Slice/icons/24/chevron-left-1.png");
+}
+
+.awf-weather-icon {
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    background: url("./Slice/Placeholder/Academy-Weather-bg160.png");
+}
+
+.awf-weather-card._filled {
+    /* Accent */
+
+    background: #373AF5;
+    /* Accent */
+
+    border: 2px solid #373AF5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+    border-radius: 8px;
+}
+
+.awf-weather-card._filled > .awf-weather-card__date {
+    /* Body bold */
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    /* #Base weak */
+    color: #FFFFFF;
+    align-self: flex-start;
+    padding: 20px;
+}
+
+.awf-weather-card__temp {
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    /* #Base weak */
+    color: #FFFFFF;
+    align-self: flex-end;
+    padding: 20px;
+}
+
+.awf-weather-card__icon {
+    width: 160px;
+    height: 160px;
+    align-self: center;
+}
+
+.awf-label {
+    /* Body bold */
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8083A4;
+    text-align: center;
+}
+
+.awf-footer {
+    align-self: center;
+    font-family: Ubuntu-Regular;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 18px;
+    /* #Base weak */
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+@media screen and (min-width: 321px) and (max-width: 840px) {
+    .awf-forecast {
+        flex-direction: column;
+    }
+
+    .awf-past-forecast {
+        margin-left: 0;
+        margin-top: 34px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .awf-forecast {
+        flex-direction: column;
+    }
+
+    .awf-past-forecast {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .awf-header {
+        font-family: Ubuntu-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .awf-forecast-card {
+        width: 300px;
+    }
+
+    .awf-field:last-child {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
